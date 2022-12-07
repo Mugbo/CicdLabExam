@@ -14,6 +14,20 @@ public class Employee {
     setAge(age);
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        if(name.length() <= 25 && name.length() >=3 ){
+            this.name = name;
+        }
+        else{
+            throw new IllegalArgumentException("Name must be a minimum of 3 and a maximum of 25 characters.");
+        }
+    }
+
+
 
 
 }
