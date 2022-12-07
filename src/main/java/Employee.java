@@ -27,6 +27,19 @@ public class Employee {
         }
     }
 
+    public long getId(){
+        return id;
+    }
+    public void setId(long id){
+        if(String.valueOf(id).length() == 11){
+            this.id = id;
+        }
+        else{
+            throw new IllegalArgumentException("PPS ID must be an eleven digit number.");
+        }
+    }
+
+
 
 
 
