@@ -22,6 +22,11 @@ void testName(){
      myEmployee.setId(12345678912L);
      assertEquals(12345678912L , myEmployee.getId());
 }
+@Test
+void testEmploymentType(){
+     myEmployee.setEmploymentType("Full-time");
+     assertEquals("Full-time", myEmployee.getId());
+}
 
 
 
