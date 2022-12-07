@@ -9,7 +9,7 @@ public class Employee {
     public Employee(String name, long id, String employmentType, String gender, int age){
     setName(name);
     setId(id);
-    setEmployment(employmentType);
+    setEmploymentType(employmentType);
     setGender(gender);
     setAge(age);
     }
