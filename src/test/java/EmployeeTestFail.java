@@ -25,7 +25,11 @@ public class EmployeeTestFail {
         Exception exMessage = assertThrows(IllegalArgumentException.class, () -> new Employee("James", 12345678912L, "sometimes", "Man", 22));
         assertEquals("Employment type must be 'Full-time', 'Part-time' or 'Contract'", exMessage);
     }
-
+    @Test
+    void testGenderFail() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> new Employee("James", 12345678912L, "Full-Time", "Penguin", 22));
+        assertEquals("Gender must be 'Man', 'Woman' or 'Non-Binary'", exMessage);
+    }
 
 
 
