@@ -38,9 +38,16 @@ public class Employee {
             throw new IllegalArgumentException("PPS ID must be an eleven digit number.");
         }
     }
+    public String getEmploymentType(){
+        return employmentType;
+    }
 
-
-
-
-
+    public void setEmploymentType(String employmentType) {
+        if("Full-time".equalsIgnoreCase(employmentType) || "Part-time".equalsIgnoreCase(employmentType) || "Contract".equalsIgnoreCase(employmentType)){
+            this.employmentType = employmentType;
+        }
+        else{
+            throw new IllegalArgumentException("Employment type must be 'Full-time', 'Part-time' or 'Contract'");
+        }
+    }
 }
