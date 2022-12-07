@@ -1,6 +1,8 @@
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestTemplate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class EmployeeTestSuccess {
@@ -13,7 +15,6 @@ public class EmployeeTestSuccess {
 
 @Test
 void testName(){
-     myEmployee.setName("James");
      assertEquals("James", myEmployee.getName());
 
 }
@@ -31,6 +32,11 @@ void testEmploymentType(){
      void testGender(){
      myEmployee.setGender("Man");
      assertEquals("Man", myEmployee.getGender());
+}
+@Test
+     void testAge(){
+     myEmployee.setAge(22);
+     assertEquals(22, myEmployee.getAge());
 }
 
 
