@@ -17,7 +17,6 @@ public class Employee {
     public String getName(){
         return name;
     }
-
     public void setName(String name){
         if(name.length() <= 25 && name.length() >=3 ){
             this.name = name;
@@ -26,7 +25,6 @@ public class Employee {
             throw new IllegalArgumentException("Name must be a minimum of 3 and a maximum of 25 characters.");
         }
     }
-
     public long getId(){
         return id;
     }
@@ -41,7 +39,6 @@ public class Employee {
     public String getEmploymentType(){
         return employmentType;
     }
-
     public void setEmploymentType(String employmentType) {
         if("Full-time".equalsIgnoreCase(employmentType) || "Part-time".equalsIgnoreCase(employmentType) || "Contract".equalsIgnoreCase(employmentType)){
             this.employmentType = employmentType;
@@ -50,4 +47,19 @@ public class Employee {
             throw new IllegalArgumentException("Employment type must be 'Full-time', 'Part-time' or 'Contract'");
         }
     }
+    public String getGender(){
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        if("Man".equalsIgnoreCase(gender) || "Woman".equalsIgnoreCase(gender) || "Non-Binary".equalsIgnoreCase(gender)){
+            this.gender = gender;
+        }
+        else{
+            throw new IllegalArgumentException("Gender must be 'Man', 'Woman' or 'Non-Binary'");
+        }
+    }
+
+
+
 }
