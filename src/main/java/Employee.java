@@ -59,6 +59,18 @@ public class Employee {
             throw new IllegalArgumentException("Gender must be 'Man', 'Woman' or 'Non-Binary'");
         }
     }
+    public int getAge(){
+        return age;
+    }
+    public void setAge(int age){
+        if(age > 16 && age < 66){
+            this.age = age;
+        }
+        else {
+            throw new IllegalArgumentException("Age must be greater than 16 and less than 66");
+
+        }
+    }
 
 
 
