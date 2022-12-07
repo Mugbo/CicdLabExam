@@ -20,6 +20,12 @@ public class EmployeeTestFail {
         Exception exMessage = assertThrows(IllegalArgumentException.class, () -> new Employee("James", 12345L, "Full-Time", "Man", 22));
         assertEquals("PPS ID must be an eleven digit number.", exMessage);
     }
+    @Test
+    void testEmploymentTypeFail() {
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> new Employee("James", 12345678912L, "sometimes", "Man", 22));
+        assertEquals("Employment type must be 'Full-time', 'Part-time' or 'Contract'", exMessage);
+    }
+
 
 
 
