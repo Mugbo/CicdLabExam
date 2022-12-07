@@ -25,7 +25,12 @@ void testName(){
 @Test
 void testEmploymentType(){
      myEmployee.setEmploymentType("Full-time");
-     assertEquals("Full-time", myEmployee.getId());
+     assertEquals("Full-time", myEmployee.getEmploymentType());
+}
+@Test
+     void testGender(){
+     myEmployee.setGender("Man");
+     assertEquals("Man", myEmployee.getGender());
 }
 
 
